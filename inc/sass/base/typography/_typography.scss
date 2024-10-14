@@ -1,0 +1,21 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $text;
+	font-family: var(--font-primary);
+	font-size: 1rem;
+	line-height: var(--type-scale);
+}
+
+.has-small-font-size             { font-size: var(--font-size-sm) !important; }
+.has-medium-font-size            { font-size: var(--font-size-0) !important; }
+.has-large-font-size             { font-size: var(--font-size-1) !important; }
+.has-extra-large-font-size       { font-size: var(--font-size-2) !important; }
+.has-extra-extra-large-font-size { font-size: var(--font-size-3) !important; }
+
+
+@import "headings";
+@import "copy";

@@ -1,0 +1,66 @@
+ul,
+ol {
+	list-style-position: inside;
+	margin: 0 0 var(--gap) 3em;
+
+	li:not(:last-child) {
+		margin-bottom: calc( var(--gap) / 2 );
+	}
+}
+
+ul {
+	list-style-type: disc;
+
+	ul {
+		list-style-type: circle;
+	}
+}
+
+ol {
+	list-style-type: decimal;
+
+	ol {
+		list-style-type: lower-alpha;
+
+		ol {
+			list-style-type: lower-roman;
+		}
+	}
+}
+
+li > ul,
+li > ol {
+	margin-top: calc( var(--gap) / 2 );
+	margin-left: var(--gap);
+	margin-bottom: 0;
+
+	padding-left: 0;
+}
+
+dl {
+	margin-top: 0;
+	margin-bottom: var(--gap);
+
+	dt {
+		font-weight: 700;
+		margin: 0;
+		padding: 0;
+	}
+
+	dd {
+		position: relative;
+		margin: 0 0 calc( var(--gap) / 2 );
+		padding-left: var(--gap);
+
+		&:before {
+			position: absolute;
+			content: '\2014';
+			left: 0;
+			top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

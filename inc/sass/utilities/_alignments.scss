@@ -1,0 +1,114 @@
+.alignleft {
+	/*rtl:ignore*/
+	float: left;
+
+	/*rtl:ignore*/
+	margin-right: var(--gap);
+	margin-bottom: var(--gap);
+
+	.wp-block-image & {
+		margin: 0.25rem var(--gap) var(--gap) 0;
+
+		@media screen and (min-width:$aligndefaultpagemargin) {
+			margin-left: 0;
+		}
+	}
+
+	/*
+	&:not(.alignwide):not(.alignfull) {
+		margin-left: var(--page-margin);
+
+		@media screen and (min-width:$aligndefaultpagemargin) {
+			margin-left: calc( (100vw - var(--aligndefault) ) / 2 );
+		}
+
+		@media screen and (min-width:$alignwide) {
+			margin-left: calc( ( (100vw - var(--aligndefault) ) / 2 ) - ( 4 * var(--gap) ) );
+		}
+	}
+	*/
+
+	&.alignwide {
+		margin-left: var(--page-margin);
+
+		@media screen and (min-width:$alignwidepagemargin) {
+			margin-left: calc( (100vw - var(--alignwide) ) / 2 );
+		}
+	}
+}
+
+.alignright {
+	/*rtl:ignore*/
+	float: right;
+
+	/*rtl:ignore*/
+	margin-left: var(--gap);
+	margin-bottom: var(--gap);
+
+	.wp-block-image & {
+		margin: 0.25rem 0 var(--gap) var(--gap);
+
+		@media screen and (min-width:$aligndefaultpagemargin) {
+			margin-right: 0;
+		}
+	}
+
+	/*
+	&:not(.alignwide):not(.alignfull) {
+		margin-right: var(--page-margin);
+
+		@media screen and (min-width:$aligndefaultpagemargin) {
+			margin-right: calc( (100vw - var(--aligndefault) ) / 2 );
+		}
+
+		@media screen and (min-width:$alignwide) {
+			margin-right: calc( ( (100vw - var(--aligndefault) ) / 2 ) - ( 4 * var(--gap) ) );
+		}
+	}
+	*/
+
+	&.alignwide {
+		margin-right: var(--page-margin);
+
+		@media screen and (min-width:$alignwidepagemargin) {
+			margin-right: calc( (100vw - var(--alignwide) ) / 2 );
+		}
+	}
+}
+
+.aligncenter {
+	clear: both;
+
+	@include center-block;
+
+	margin-bottom: var(--gap);
+}
+
+.aligndefault {
+	max-width: var(--aligndefault);
+	margin-left: auto;
+	margin-right: auto;
+}
+.alignwide {
+	max-width: var(--alignwide);
+	margin-left: auto;
+	margin-right: auto;
+
+		@media screen and (max-width:$alignwidepagemargin) {
+			padding-left: var(--page-margin);
+			padding-right: var(--page-margin);
+		}
+}
+.alignfull {
+	max-width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+
+	& > [class$="inner-container"] {
+
+		@media screen and (max-width:$aligndefaultpagemargin) {
+			padding-left: var(--page-margin);
+			padding-right: var(--page-margin);
+		}
+	}
+}

@@ -1,0 +1,13 @@
+.site-footer-wrap {
+	padding: var(--gap) 0;
+}
+
+.site-footer,
+.site-info {
+	max-width: var(--alignwide);
+	margin-left: auto;
+	margin-right: auto;
+}
+.site-footer {
+	@include max-width-alignwide;
+}

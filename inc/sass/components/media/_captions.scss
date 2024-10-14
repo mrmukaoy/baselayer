@@ -1,0 +1,30 @@
+.wp-block-image .aligncenter > figcaption,
+.wp-block-image .alignleft > figcaption,
+.wp-block-image .alignright > figcaption,
+.wp-block-image.aligncenter > figcaption,
+.wp-block-image.alignleft > figcaption,
+.wp-block-image.alignright > figcaption {
+	display: table-caption;
+	caption-side: bottom;
+	font-size: inherit;
+	text-align: left;
+	color: var(--text);
+}
+
+.wp-caption {
+	margin-bottom: var(--gap);
+	max-width: 100%;
+
+	img[class*="wp-image-"] {
+
+		@include center-block;
+	}
+
+	.wp-caption-text {
+		margin: calc( var(--gap) / 4 ) 0 0 0;
+	}
+}
+
+.wp-caption-text {
+	text-align: left;
+}

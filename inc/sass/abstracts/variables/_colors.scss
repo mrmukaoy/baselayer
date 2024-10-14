@@ -1,0 +1,44 @@
+$text:        #222222;
+$body-bg:     #ffffff;
+$hr-color:    #ccc;
+$button-bg:   #222;
+$button-text: #ffffff;
+$pre-bg:      $body-bg;
+$ins-bg:      #fff9c0;
+
+$screenreader-text: $text;
+$screenreader-bg-color: $body-bg;
+
+$text-input: #555;
+$text-input-focus: $text;
+$input-border-color: #999;
+
+$link-color:         #4169e1; //royalblue
+$link-color-visited: $link-color;
+$link-hover-color:   #191970; //midnightblue
+
+$button-border-color: $button-bg;
+$button-border-color-hover: #ccc #bbb #aaa;
+$abbr-border-color: #666;
+
+/* CSS Vars */
+:root {
+	--text:                      #{$text};
+	--body-bg:                   #{$body-bg};
+	--hr-color:                  #{$hr-color};
+	--button-bg:                 #{$button-bg};
+	--button-text:               #{$button-text};
+	--button-border-color:       #{$button-border-color};
+	--button-border-color-hover: #{$button-border-color-hover};
+
+	--ins-bg:              #{$ins-bg};
+
+	--text-input:          #{$text-input};
+	--input-border-color:  #{$input-border-color};
+	
+	--link-color:       #{$link-color};
+	--link-hover-color: #{$link-hover-color};
+
+	--black: #000000;
+	--white: #ffffff;
+}

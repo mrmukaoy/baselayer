@@ -1,0 +1,40 @@
+$remnum:     16;
+$rem:        16px;
+$type-scale: 1.33;
+$gap: $rem * $type-scale;
+
+$font-size-0: $rem;
+$font-size-1: $remnum * $type-scale * 1px;
+$font-size-2: $font-size-1 * $type-scale;
+$font-size-3: $font-size-2 * $type-scale;
+$font-size-4: $font-size-3 * $type-scale;
+$font-size-sm: $rem * 0.9;
+
+// stylelint-disable value-keyword-case
+$font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+// stylelint-enable value-keyword-case
+$font-code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", courier, monospace;
+$font__line-height-pre: 1.6;
+
+
+/* CSS VARS */
+:root {
+	--rem:         #{$rem};
+	--type-scale:  #{$type-scale};
+	--gap:         #{$gap};
+
+	--font-primary: #{$font-primary};
+	--font-code:    #{$font-code};
+
+	--font-size-sm: #{$font-size-sm};
+	--font-size-0:  #{$font-size-0};
+	--font-size-1:  #{$font-size-1};
+	--font-size-2:  #{$font-size-2};
+	--font-size-3:  #{$font-size-3};
+	--font-size-4:  #{$font-size-4};
+
+	--wp--preset--font-size--small:  var(--font-size-sm);
+	--wp--preset--font-size--medium: var(--font-size-0);
+	--wp--preset--font-size--large:  var(--font-size-1);
+}

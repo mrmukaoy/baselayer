@@ -1,0 +1,37 @@
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*
+@media screen and (min-width:$alignwide) {
+	.entry-content > .wp-block-image > .alignleft,
+	.page-content > .wp-block-image > .alignleft {
+		margin-left: calc( -4 * var(--gap) );
+	}
+
+	.entry-content > .wp-block-image > .alignright,
+	.page-content > .wp-block-image > .alignright {
+		margin-right: calc( -4 * var(--gap) );
+	}
+}
+*/
+
+.wp-block-image :where(figcaption) {
+	margin-top: calc( var(--gap) / 4 );
+	margin-bottom: 0;
+}
+:root :where(.wp-block-image figcaption) {
+	text-align: left;
+	font-size: inherit;
+	color: var(--text);
+}

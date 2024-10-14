@@ -1,0 +1,44 @@
+.wp-block-table {
+	&:not(.alignwide):not(.alignfull):not(.aligncenter):not(.alignright) {
+		margin-left: 0 !important;
+
+		@media screen and (min-width:$aligndefaultpagemargin) {
+			margin-left: calc( ( 100vw - var(--aligndefault) ) / 2 ) !important;
+		}
+	}
+
+	&.alignright {
+		margin-right: 0 !important;
+
+		@media screen and (min-width:$aligndefaultpagemargin) {
+			margin-right: calc( ( 100vw - var(--aligndefault) ) / 2 ) !important;
+		}
+	}
+
+	&.alignwide table {
+		max-width: calc( 100vw - ( 2 * var(--page-margin) ) );
+
+		@media screen and (min-width:$alignwidepagemargin) {
+			margin-right: calc( ( var(--alignwide) ) - ( 2 * var(--page-margin) ) ) !important;
+		}
+	}
+}
+
+.wp-block-table table {
+	margin: 0 0 var(--gap);
+	width: 100%;
+
+	th {
+		border-width: 0 0 3px;
+		border-color: var(--black);
+		border-style: solid;
+	}
+
+	td:first-child {
+		border-left: none;
+	}
+
+	td:last-child {
+		border-right: none;
+	}
+}

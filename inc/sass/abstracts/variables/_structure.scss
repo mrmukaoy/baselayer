@@ -1,0 +1,25 @@
+$aligndefault: (60 * $rem ) + (4 * $gap ); // 1045px if 1rem = 16px
+$alignwide: (86 * $rem) + (4 * $gap ); // 1461px if 1rem = 16px
+$alignfull: 100%;
+
+// breakpoints for @media with addl width for padding
+$aligndefaultpagemargin: $aligndefault + ( 4 * $gap );
+$alignwidepagemargin:    $alignwide + ( 4 * $gap );
+
+$border-radius: 0.375rem;
+
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+:root {
+	--page-margin:   #{$gap};
+
+	--aligndefault:  #{$aligndefault};
+	--alignwide:     #{$alignwide};
+
+	--border-radius: #{$border-radius};
+
+	@media screen and (min-width:$aligndefault) {
+		--page-margin: calc( 2 * #{$gap} );
+	}
+}

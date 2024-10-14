@@ -1,0 +1,80 @@
+p {
+	margin-top: 0;
+	margin-bottom: var(--gap);
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+cite {
+	position: relative;
+	display: block;
+	padding-left: calc( 1.5 * var(--gap) );
+
+	&:before {
+		position: absolute;
+		content: '\2014';
+		top: 0;
+		left: calc( 0.5 * var(--gap) );
+	}
+}
+
+blockquote {
+	margin: 0 var(--gap);
+}
+
+address {
+	margin: 0 0 var(--gap);
+}
+
+pre {
+	background: $pre-bg;
+	font-family: var(--font-code);
+	line-height: $font__line-height-pre;
+	margin-top: 0;
+	margin-bottom: var(--gap);
+	max-width: 100%;
+	overflow: auto;
+	padding: calc( var(--gap) / 2 ) 0;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: var(--font-code);
+}
+
+.wp-block-code {
+	font-family: var(--font-code);
+	border-radius: var(--border-radius);
+	padding: calc( var(--gap) / 2) var(--gap) !important;
+	margin-top: 0;
+
+	@media screen and (max-width:$aligndefaultpagemargin) {
+		margin-left: var(--page-margin) !important;
+		margin-right: var(--page-margin) !important;
+	}
+}
+
+abbr,
+abbr[title],
+acronym {
+	border-bottom: 2px dotted var(--link-color);
+	text-decoration: none;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: $ins-bg;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}

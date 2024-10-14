@@ -1,0 +1,35 @@
+html {
+	font-size: var(--font-size-0);
+	line-height: var(--type-scale);
+}
+
+body {
+	background: $body-bg; // Fallback for when there is no custom background color defined.
+	min-height: 100vh;
+
+	&.admin-bar {
+		min-height: calc( 100vh - 32px );
+
+		@media screen and (max-width:782px) {
+			min-height: calc( 100vh - 46px );
+		}
+	}
+}
+
+#page {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+
+	.admin-bar & {
+		min-height: calc( 100vh - 32px );
+
+		@media screen and (max-width:782px) {
+			min-height: calc( 100vh - 46px );
+		}
+	}
+
+	.site-main {
+		overflow: hidden;
+	}
+}
