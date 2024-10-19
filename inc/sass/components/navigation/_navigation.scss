@@ -58,6 +58,12 @@
 		&:hover > a,
 		&.focus > a {
 		}
+
+		.sub-menu-toggle {
+			@media screen and (min-width:600px) {
+				display: none;
+			}
+		}
 	}
 
 	a {

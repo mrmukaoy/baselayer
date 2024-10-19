@@ -185,6 +185,7 @@ function yo_baselayercontent_width() {
 
 /** Register widget area. */
 function yo_baselayerwidgets_init() {
+	/*
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'baselayer' ),
@@ -192,6 +193,40 @@ function yo_baselayerwidgets_init() {
 			'description'   => esc_html__( 'Add widgets here.', 'baselayer' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	*/
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer 1', 'baselayer' ),
+			'id'            => 'footer-1',
+			'description'   => esc_html__( 'Add widgets here.', 'baselayer' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer 2', 'baselayer' ),
+			'id'            => 'footer-2',
+			'description'   => esc_html__( 'Add widgets here.', 'baselayer' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer 3', 'baselayer' ),
+			'id'            => 'footer-3',
+			'description'   => esc_html__( 'Add widgets here.', 'baselayer' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		)
@@ -220,6 +255,11 @@ require get_template_directory() . '/inc/template-tags.php';
 
 /** Functions which enhance the theme by hooking into WordPress. */
 require get_template_directory() . '/inc/template-functions.php';
+
+/** Navigation traversal feature. */
+// require get_template_directory() . '/inc/main-menu.php';
+// require get_template_directory() . '/inc/main-menu-walker-class.php';
+// require get_template_directory() . '/inc/subnav-walker-class.php';
 
 /** Customizer additions. */
 require get_template_directory() . '/inc/customizer.php';

@@ -46,7 +46,16 @@
 			<nav id="site-navigation" class="main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'baselayer' ); ?></button>
 
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', ) ); ?>
+				<?php /* This OUGHT to use the Main Menu class, but it doesn't seem to be working. Disabled.
+				<ul class="menu nav-menu">
+					<?php yo_baselayer_main_menu(); ?>
+				</ul> <!-- .nav-menu -->
+				*/ ?>
+
+				<?php
+				// uses orig menu script
+				wp_nav_menu( array( 'theme_location' => 'primary', ) );
+				?>
 
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->

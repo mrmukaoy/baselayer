@@ -6,3 +6,24 @@
 		max-width: 100%;
 	}
 }
+
+/* FOOTER */
+.footer-widget-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: calc( 2 * var(--gap) );
+
+	.widget-area {
+		min-width: 275px;
+
+		@media screen and (max-width:500px) {
+			width: 100%;
+			min-width: unset;
+			max-width: 350px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
